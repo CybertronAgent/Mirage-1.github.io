@@ -7,14 +7,14 @@
     <br>
     <div class="logo" style="text-align: center; width: 5%;">
         <a href="index.html">
-            <img src="./assets/images/optimus2.png">
+            <img src="./assets/images/mirage.png">
         </a>
     </div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Optimus-2: Multimodal Minecraft Agent with Goal-Observation-Action Conditioned Policy">
-    <title>Optimus-2: Multimodal Minecraft Agent with Goal-Observation-Action Conditioned Policy</title>
+        content="Mirage-1: Augmenting and Updating GUI Agent with Hierarchical Multimodal Skills">
+    <title>Mirage-1: Augmenting and Updating GUI Agent with Hierarchical Multimodal Skills</title>
     <script>
 
     </script>
@@ -43,16 +43,15 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Optimus-2: Multimodal Minecraft Agent with
-                            Goal-Observation-Action Conditioned Policy</h1>
+                        <h1 class="title is-1 publication-title">Mirage-1: Augmenting and Updating GUI Agent with Hierarchical Multimodal Skills</h1>
                         <h2 style="font-weight: bold; font-size: 35px;">CVPR 2025</h2>
                         <span class="author-block">
                             <a target="_blank"
-                                href="https://scholar.google.com/citations?user=TDBF2UoAAAAJ&hl=en&oi=ao">Zaijing&#160;Li</a><sup>1
-                                2</sup>,
-                            <a target="_blank"
                                 href="https://scholar.google.com/citations?user=KO77A2oAAAAJ&hl=en">Yuquan&#160;Xie</a><sup>1
                             </sup>,
+                            <a target="_blank"
+                                href="https://scholar.google.com/citations?user=TDBF2UoAAAAJ&hl=en&oi=ao">Zaijing&#160;Li</a><sup>1
+                                2</sup>,
                             <a target="_blank"
                                 href="https://scholar.google.com/citations?user=9Vc--XsAAAAJ&hl=en&oi=ao">Rui&#160;Shao</a><sup>1&#9993</sup>,
                             <a target="_blank"
@@ -61,11 +60,16 @@
                             <a target="_blank"
                                 href="https://scholar.google.com/citations?hl=en&user=Awsue7sAAAAJ">Dongmei&#160;Jiang</a><sup>2</sup>,
                             <a target="_blank"
+                                href="https://scholar.google.com/citations?hl=en&user=nHmlZ5QAAAAJ">Kaiwen&#160;Zhou</a><sup>3</sup>,
+                            <a target="_blank"
+                                href="https://scholar.google.com/citations?user=M6YfuCTSaKsC&hl=en">Yinchuan&#160;Li</a><sup>3</sup>,
+                            <a target="_blank"
                                 href="https://scholar.google.com/citations?hl=en&user=yywVMhUAAAAJ">Liqiang&#160;Nie</a><sup>1&#9993</sup>,
                             <div class="is-size-5 publication-authors" style="font-size: 10px;">
                                 <span class="author-block"><sup>1</sup>Harbin Institute of Technology,
                                     Shenzhen&#160&#160&#160</span>
                                 <span class="author-block"><sup>2</sup>Peng Cheng Laboratory, Shenzhen</span>
+                                <span class="author-block"><sup>3</sup>Huawei Noah's Ark Lab</span>
                             </div>
 
 
@@ -116,16 +120,7 @@
         </div>
     </section>
 
-    <!-- TODO: Youtube video -->
-    <!-- <div class="columns is-centered has-text-centered">
-        <div class="column">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SWnGs3TXRp0?si=ZcwAcxdikGEhEyjM"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div> -->
-
+   
     <section class="section" style="background-color:#efeff081">
         <div class="container is-max-desktop">
             <!-- Abstract. -->
@@ -134,25 +129,19 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p style="font-size: 125%">
-                            Building an agent that can mimic human behavior patterns to accomplish various open-world
-                            tasks is a long-term goal. To enable agents to effectively learn behavioral patterns across
-                            diverse tasks, a key challenge lies in modeling the intricate relationships among
-                            observations, actions, and language. To this end, we propose Optimus-2, a novel Minecraft
-                            agent that incorporates a Multimodal Large Language Model (MLLM) for high-level planning,
-                            alongside a <b>G</b>oal-<b>O</b>bservation-<b>A</b>ction Conditioned <b>P</b>olicy
-                            (<b>GOAP</b>) for low-level control. GOAP
-                            contains (1) an Action-guided Behavior Encoder that models causal relationships between
-                            observations and actions at each timestep, then dynamically interacts with the historical
-                            observation-action sequence, consolidating it into fixed-length behavior tokens, and (2) an
-                            MLLM that aligns behavior tokens with open-ended language instructions to predict actions
-                            auto-regressively. Moreover, we introduce a high-quality <b>M</b>inecraft
-                            <b>G</b>oal-<b>O</b>bservation-<b>A</b>ction
-                            (<b>MGOA</b>) dataset, which contains 25,000 videos across 8 atomic tasks, providing about
-                            30M
-                            goal-observation-action pairs. The automated construction method, along with the MGOA
-                            dataset, can contribute to the community's efforts to train Minecraft agents. Extensive
-                            experimental results demonstrate that Optimus-2 exhibits superior performance across atomic
-                            tasks, long-horizon tasks, and open-ended instruction tasks in Minecraft.
+                           Recent efforts to leverage the Multi-modal Large Language Model (MLLM) as GUI agents have yielded 
+                            promising outcomes. However, these agents still struggle with long-horizon tasks in online environments, 
+                            primarily due to insufficient knowledge and the inherent gap between offline and online domains. 
+                            In this paper, inspired by how humans generalize knowledge in open-ended environments, we propose a 
+                            <b>H</b>ierarchical <b>M</b>ultimodal <b>S</b>kills (<b>HMS</b>) module to tackle the issue of insufficient knowledge. 
+                            It progressively abstracts trajectories into execution skills, core skills, and ultimately meta-skills, providing a hierarchical 
+                            knowledge structure for long-horizon task planning. To bridge the domain gap, we propose 
+                            the <b>S</b>kill-<b>A</b>ugmented <b>M</b>onte <b>C</b>arlo <b>T</b>ree <b>S</b>earch (<b>SA-MCTS</b>) 
+                            algorithm, which efficiently leverages skills acquired in offline environments to reduce the action search space during 
+                            online tree exploration. Building on HMS, we propose <b>Mirage-1</b>, a multimodal, cross-platform, plug-and-play GUI agent. 
+                            To validate the performance of Mirage-1 in real-world long-horizon scenarios, we constructed a new benchmark, 
+                            AndroidLH. Experimental results show that Mirage-1 outperforms previous agents by 32\%, 19\%, 15\%, and 79\% on AndroidWorld, 
+                            MobileMiniWob++, Mind2Web-Live, and AndroidLH, respectively. 
                         </p>
                     </div>
                 </div>
@@ -160,172 +149,7 @@
         </div>
     </section>
 
-    <section class="section" style="background-color:#ffffff">
-
-        <div class="container is-max-desktop is-centered">
-            <h2 style="font-size: 30px; text-align: center;">Atomic Task</h2>
-
-            <div class="video-container">
-                <div class="box">
-                    <div class="video1"><video controls>
-                            <source src="./assets/videos/dirt1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text1">
-                        <h1 style="text-align: center;">Dig down to mine dirt</h1>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="video2"><video controls>
-                            <source src="./assets/videos/log1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text2">
-                        <h1 style="text-align: center;">Chop trees</h1>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="video3"><video controls>
-                            <source src="./assets/videos/stone1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text3">
-                        <h1 style="text-align: center;">Dig down to mine stone</h1>
-                    </div>
-                </div>
-            </div>
-
-
-            <h2 style="font-size: 30px; text-align: center;">Long-horizon Tasks</h2>
-            <div class="video-container">
-                <div class="box">
-                    <div class="video3"><video controls>
-                            <source src="./assets/videos/iron_sword.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text3">
-                        <h1 style="text-align: center;">Craft an iron sword</h1>
-                        <ol>
-                            <li>mine 7 logs</li>
-                            <li>craft 23 planks</li>
-                            <li>craft 6 stick</li>
-                            <li>craft 1 crafting table</li>
-                            <li>craft 1 wooden pickaxe</li>
-                            <li>equip 1 wooden pickaxe</li>
-                            <li>dig down and break down 11 cobblestone</li>
-                            <li>craft 1 stone pickaxe</li>
-                            <li>equip 1 stone pickaxe</li>
-                            <li>craft 1 furnace</li>
-                            <li>dig down and break down 2 iron ore</li>
-                            <li>smelt 2 iron ore</li>
-                            <li>craft 1 iron sword</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="video2"><video controls>
-                            <source src="./assets/videos/golden_pickaxe.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text2">
-                        <h1 style="text-align: center;">Craft a golden pickaxe</h1>
-                        <ol>
-                            <li>mine 10 logs</li>
-                            <li>craft 38 planks</li>
-                            <li>craft 8 sticks</li>
-                            <li>craft 1 crafting table</li>
-                            <li>craft 1 wooden pickaxe</li>
-                            <li>equip 1 wooden pickaxe</li>
-                            <li>dig down and break down 12 cobblestone</li>
-                            <li>craft 1 stone pickaxe</li>
-                            <li>equip 1 stone pickaxe</li>
-                            <li>craft 1 furnace</li>
-                            <li>dig down and break down 3 iron ore</li>
-                            <li>smelt 3 iron ore</li>
-                            <li>craft 1 iron pickaxe</li>
-                            <li>dig down and mine 3 gold</li>
-                            <li>smelt 3 gold</li>
-                            <li>craft 1 golden axe</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="video1"><video controls>
-                            <source src="./assets/videos/diamond_hoe.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text1">
-                        <h1 style="text-align: center;">Craft a diamond hoe</h1>
-                        <ol>
-                            <li>mine 10 logs</li>
-                            <li>craft 38 planks</li>
-                            <li>craft 8 sticks</li>
-                            <li>craft 1 crafting table</li>
-                            <li>craft 1 wooden pickaxe</li>
-                            <li>equip 1 wooden pickaxe</li>
-                            <li>dig down and break down 12 cobblestone</li>
-                            <li>craft 1 stone pickaxe</li>
-                            <li>equip 1 stone pickaxe</li>
-                            <li>craft 1 furnace</li>
-                            <li>dig down and break down 3 iron ore</li>
-                            <li>smelt 3 iron ore</li>
-                            <li>craft 1 iron pickaxe</li>
-                            <li>dig 2 down and mine 2 diamond</li>
-                            <li>craft 1 diamond hoe</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <h2 style="font-size: 30px; text-align: center;">Open-Ended Instruction
-                Tasks</h2>
-            <div class="video-container">
-                <div class="box">
-                    <div class="video1"><video controls>
-                            <source src="./assets/videos/open_end_dirt.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text1">
-                        <h1 style="text-align: center;">I want to some dirt to build house, can you help me?</h1>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="video2"><video controls>
-                            <source src="./assets/videos/open_end_log.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text2">
-                        <h1 style="text-align: center;">I born in the desert. First, I need to find a tree to gather
-                            some
-                            logs.</h1>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="video3"><video controls>
-                            <source src="./assets/videos/open_end_log2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video></div>
-
-                    <div class="text3">
-                        <h1 style="text-align: center;">I want to craft the wooden pickaxe, so I need to chop some trees
-                            to
-                            get logs.</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-
-    </section>
+   
 
 
     <section class="section" style="background-color:#efeff081">
@@ -333,18 +157,17 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3">Overview framework of our Optimus-2</h2>
-                        <img src="assets/images/fig2.png" class="interpolation-image" alt=""
+                        <h2 class="title is-3">Overview Framework</h2>
+                        <img src="assets/images/fig1.png" class="interpolation-image" alt=""
                             style="display: block; margin-left: auto; margin-right: auto" width="800" height="700" />
                         <br>
                         <span style="font-size: 110%">
-                            We propose Optimus-2, a novel Minecraft agent that incorporates a Multimodal Large Language
-                            Model (MLLM) for high-level planning, alongside a Goal-Observation-Action Conditioned Policy
-                            (GOAP) for low-level control. GOAP contains (1) an Action-guided Behavior Encoder that
-                            models causal relationships between observations and actions at each timestep, then
-                            dynamically interacts with the historical observation-action sequence, consolidating it into
-                            fixed-length behavior tokens, and (2) an MLLM that aligns behavior tokens with open-ended
-                            language instructions to predict actions auto-regressively.</span>
+                            The Mirage-1 framework comprises a Hierarchical Planner, an Operator, a Decision Reflector, 
+                            and a Hierarchical Multimodal Skills Module (HMS). To bridge the offline-online domain gap, 
+                            Skill-Augmented Monte Carlo Tree Search (SA-MCTS) is employed for unseen task exploration, 
+                            with successful trajectories expanding HMS capabilities. The Hierarchical Planner retrieves Core 
+                            Skills from HMS and decomposes task goals into sub-goals for Operator execution. 
+                            The Decision Reflector leverages Execution Skills to assess task execution feasibility.</span>
                     </div>
                 </div>
             </div>
@@ -359,36 +182,9 @@
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
                         <h2 class="title is-3"><span class="dvima">Experiment</span></h2>
-                        <span style="font-size: 110%"> We report the average rewards (AR) for Atomic Tasks, average
-                            success rate (SR) for
-                            Long-Horizon Tasks and Open-Ended Instruction Tasks.
-                        </span>
-                        <h1><span class="dvima">Table1: Main Result of GOAP on Atomic Tasks. </span></h1>
+                        <h1><span class="dvima">Table1: Performance comparison on AndroidWorld, MobileMiniWob++, and AndroidLH. </span></h1>
                         <img src="assets/images/table1.png" class="interpolation-image" alt="" width="500" height="250"
                             style="display: block; margin-left: auto; margin-right: auto" />
-                        <br>
-
-
-                        <h1><span class="dvima"><span class="dvima">Table2: Main Result of Optimus-2 on Long-Horizon
-                                    Tasks.</span></h1>
-                        <div class="image-container">
-                            <div class="image-wrapper">
-                                <img src="assets/images/table2.png" alt="" width="600" height="800"
-                                    style="margin-left: auto; margin-right: auto" />
-                            </div>
-                        </div>
-                        <br>
-
-                        <h1><span class="dvima"><span class="dvima">Table3: Main Result of Optimus-2 on Open-Ended
-                                    Instruction
-                                    Tasks.</span></h1>
-                        <div class="image-container">
-                            <div class="image-wrapper">
-                                <img src="assets/images/table3.png" alt="" width="500" height="800"
-                                    style="margin-left: auto; margin-right: auto" />
-                            </div>
-                        </div>
-
                         <br>
                     </div>
                 </div>
@@ -406,20 +202,13 @@
                         <h2 class="title is-3"><span class="dvima">Conclusion</span></h2>
 
                         <p style="font-size: 125%">
-                            In this paper, we propose a novel agent, Optimus-2, which
-                            can excel in various tasks in the open-world environment of
-                            Minecraft. Optimus-2 integrates an MLLM for high-level
-                            planning and a Goal-Observation-Action conditioned Policy (GOAP) for low-level control. As a
-                            core contribution
-                            of this paper, GOAP includes an Action-guided Behavior
-                            Encoder to model the observation-action sequence and an
-                            MLLM to align the goal with the observation-action sequence for predicting subsequent
-                            actions. Extensive experimental results demonstrate that GOAP has mastered
-                            various atomic tasks and can comprehend open-ended language instructions. This enables
-                            Optimus-2 to achieve superior performance on long-horizon tasks, surpassing existing SOTA.
-                            Moreover, we introduce a Minecraft GoalObservation-Action dataset to provide the community
-                            with
-                            large-scale, high-quality data for training Minecraft agents.
+                            In this paper, we propose a Hierarchical Multimodal Skills module (HMS) that 
+                            addresses the challenge of insufficient prior knowledge in long-horizon task planning. 
+                            To address the domain gap between offline and online, a Skill-Augmented Monte Carlo Tree 
+                            Search (SA-MCTS) algorithm is proposed. This algorithm effectively utilizes offline-acquired 
+                            skills to reduce the action search space during online tree exploration. On top of HMS, 
+                            we propose multimodal agent Mirage-1. Experimental results demonstrate that Mirage-1 
+                            achieves superior performance compared to SOTA GUI agents, particularly in long-horizon tasks.
                         </p>
 
                     </div>
@@ -429,18 +218,6 @@
         </div>
     </section>
 
-    <section class="section" id="BibTeX">
-        <div class="container is-max-widescreen content">
-            <h2 class="title">BibTeX</h2>
-            <pre><code>@inproceedings{li2025optimus2,
-    title={Optimus-2: Multimodal Minecraft Agent with Goal-Observation-Action Conditioned Policy},
-    author={Li, Zaijing and Xie, Yuquan and Shao, Rui and Chen, Gongwei and Jiang, Dongmei and Nie, Liqiang},
-    booktitle={2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year={2025},
-    organization={IEEE}
-}</code></pre>
-        </div>
-    </section>
 
 </body>
 
